@@ -9,11 +9,13 @@ const publicApiKey = process.env.NEXT_PUBLIC_COPILOT_API_KEY;
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <CopilotKit
+    <CopilotKit 
+    // <CopilotKitProvider url="http://localhost:3000/api/copilotkit">
       runtimeUrl={runtimeUrl}
       publicApiKey={publicApiKey}
     >
-      {children}
+{children}
+      
     </CopilotKit>
   );
 }
